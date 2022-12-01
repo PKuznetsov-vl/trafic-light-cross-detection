@@ -214,7 +214,7 @@ def detect_traffic_lights(PATH_TO_TEST_IMAGES_DIR, MODEL_NAME, Num_images, plot_
 
 if __name__ == "__main__":
     # Specify number of images to detect
-    Num_images = 17
+    Num_images = 19
 
     # Specify test directory path
     PATH_TO_TEST_IMAGES_DIR = './test_images'
