@@ -201,6 +201,7 @@ def padded_one_hot_encoding(indices, depth, left_pad):
     ValueError: if `indices` does not have rank 1 or if `left_pad` or `depth are
       either negative or non-integers.
 
+
   TODO: add runtime checks for depth and indices.
   """
   if depth < 0 or not isinstance(depth, (int, long) if six.PY2 else int):
