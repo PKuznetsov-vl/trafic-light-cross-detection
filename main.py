@@ -191,7 +191,9 @@ def detect_traffic_lights(PATH_TO_TEST_IMAGES_DIR, MODEL_NAME, Num_images, plot_
                 (boxes, scores, classes, num) = sess.run(
                     [detection_boxes, detection_scores, detection_classes, num_detections],
                     feed_dict={image_tensor: image_np_expanded})
-
+                print('Number of detections', num)
+                print('box',boxes)
+                print('classes', classes)
                 stop_flag = read_traffic_lights_object(image, np.squeeze(boxes), np.squeeze(scores),
                                                        np.squeeze(classes).astype(np.int32))
                 if stop_flag:
@@ -214,7 +216,7 @@ def detect_traffic_lights(PATH_TO_TEST_IMAGES_DIR, MODEL_NAME, Num_images, plot_
 
 if __name__ == "__main__":
     # Specify number of images to detect
-    Num_images = 22
+    Num_images = 9
 
     # Specify test directory path
     PATH_TO_TEST_IMAGES_DIR = './test_images'
@@ -230,3 +232,4 @@ if __name__ == "__main__":
 
 
 #Написать статью про светофоры посмотреть как определяется сигнал (цвет светофора)
+#обучить зеленому
